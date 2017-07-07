@@ -59,12 +59,11 @@ public class MainActivity extends AppCompatActivity {
         List<VerticalScrollableItem> items = new ArrayList<>();
 
         for (int i = 0; i < num; i++) {
-            String strings[] = new String[num];
-            for (int j = 0; j < num; j++) {
-                strings[j] = "Item " + j;
-            }
-            ListAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, strings);
-            items.add(new VerticalScrollableItem(adapter));
+
+            VerticalScrollableItem verticalScrollableItem = new VerticalScrollableItem();
+            verticalScrollableItem.setPATH(""+num);
+            items.add(verticalScrollableItem);
+
         }
 
         return items;

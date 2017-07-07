@@ -11,11 +11,23 @@ public class VerticalScrollableItem {
 
     // Initialize it with the ListAdapter necessary to populate and drive the vertical ListView
     // contained by this item
-    public VerticalScrollableItem(ListAdapter adapter) {
-        this.adapter = adapter;
+    public VerticalScrollableItem() {
+
     }
 
     public ListAdapter getAdapter() {
         return adapter;
     }
+
+    public  String PATH;
+
+    public String getPATH() {
+        return PATH;
+    }
+
+    public void setPATH(String PATH) {
+        this.PATH = PATH;
+    }
+
+
 }

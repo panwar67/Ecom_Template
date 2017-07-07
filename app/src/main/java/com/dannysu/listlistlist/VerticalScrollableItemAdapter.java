@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListAdapter;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -15,14 +16,14 @@ public class VerticalScrollableItemAdapter extends
         RecyclerView.Adapter<VerticalScrollableItemAdapter.ViewHolder> {
 
     private List<VerticalScrollableItem> items;
-    private int resourceId;
+   // private int resourceId;
     private Context context;
     private MultiLevelListView parentListView;
 
     public VerticalScrollableItemAdapter(int resourceId, List<VerticalScrollableItem> items,
                                      MultiLevelListView parentListView) {
         this.items = items;
-        this.resourceId = resourceId;
+        //this.resourceId = resourceId;
         this.parentListView = parentListView;
     }
 
@@ -30,7 +31,7 @@ public class VerticalScrollableItemAdapter extends
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View rootView = LayoutInflater
                 .from(viewGroup.getContext())
-                .inflate(resourceId, viewGroup, false);
+                .inflate(R.layout.items_text, viewGroup, false);
 
         context = viewGroup.getContext();
 
@@ -41,16 +42,13 @@ public class VerticalScrollableItemAdapter extends
     public void onBindViewHolder(ViewHolder viewHolder, int i) {
         final VerticalScrollableItem item = items.get(i);
 
-        ListAdapter adapter = item.getAdapter();
+        //ListAdapter adapter = item.getAdapter();
+        viewHolder.textView.setText(""+item.getPATH());
 
-        if (viewHolder.listView != null && adapter != null) {
-            viewHolder.listView.setAdapter(adapter);
 
-            // We also set the parent ListView so that whenever the child ListView is scrolling
-            // we disable touch events on the parent. This is to prevent the parent from interfering
-            // with the interaction being done on the child ListView.
-            viewHolder.listView.setParentListView(parentListView);
-        }
+
+
+
     }
 
     @Override
@@ -60,12 +58,12 @@ public class VerticalScrollableItemAdapter extends
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        private MultiLevelListView listView;
+        private TextView textView;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            listView = (MultiLevelListView)itemView.findViewById(R.id.listView);
+            textView = (TextView) itemView.findViewById(R.id.item_text);
         }
     }
 }

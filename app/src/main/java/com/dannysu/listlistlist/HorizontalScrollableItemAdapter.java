@@ -12,20 +12,22 @@ import android.widget.ArrayAdapter;
 public class HorizontalScrollableItemAdapter extends ArrayAdapter<HorizontalScrollableItem> {
 
     private int resourceId;
+    Context cont;
 
     public HorizontalScrollableItemAdapter(Context context, int resourceId, HorizontalScrollableItem[] items) {
         super(context, -1, items);
 
         this.resourceId = resourceId;
+        cont = context;
     }
 
     @Override
     public View getView (final int position, View convertView, ViewGroup parent) {
 
         if (convertView == null) {
-            LayoutInflater inflater = (LayoutInflater)getContext()
+            LayoutInflater inflater = (LayoutInflater)cont
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(resourceId, parent, false);
+            convertView = inflater.inflate(R.layout.layout_containing_horizontal_listview, parent, false);
 
             ViewHolder viewHolder = new ViewHolder();
             viewHolder.recyclerView = (RecyclerView)convertView
