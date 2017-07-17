@@ -1,9 +1,16 @@
-package com.lions.ecom;
+package com.lions.ecom.Ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.lions.ecom.Adapters.HorizontalScrollableItemAdapter;
+import com.lions.ecom.Adapters.VerticalScrollableItemAdapter;
+import com.lions.ecom.Structs.HorizontalScrollableItem;
+import com.lions.ecom.Custom_Widgets.MultiLevelListView;
+import com.lions.ecom.R;
+import com.lions.ecom.Structs.VerticalScrollableItem;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.lions.ecom;
+package com.lions.ecom.Structs;
 
 import android.widget.ListAdapter;
 

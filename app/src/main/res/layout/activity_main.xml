@@ -1,9 +1,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lions.ecom.MainActivity">
+    tools:context="com.lions.ecom.Ui.MainActivity">
 
-    <com.lions.ecom.MultiLevelListView
+    <com.lions.ecom.Custom_Widgets.MultiLevelListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/listView"

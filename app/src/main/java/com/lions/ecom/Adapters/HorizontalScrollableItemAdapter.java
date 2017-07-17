@@ -1,4 +1,4 @@
-package com.lions.ecom;
+package com.lions.ecom.Adapters;
 
 import android.content.Context;
 import android.support.v7.widget.LinearLayoutManager;
@@ -7,6 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+
+import com.lions.ecom.Structs.HorizontalScrollableItem;
+import com.lions.ecom.R;
 
 // This is used by top container ListView whose items each contain a horizontal ListView
 public class HorizontalScrollableItemAdapter extends ArrayAdapter<HorizontalScrollableItem> {

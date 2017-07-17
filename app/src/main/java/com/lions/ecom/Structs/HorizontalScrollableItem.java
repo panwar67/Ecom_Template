@@ -1,4 +1,6 @@
-package com.lions.ecom;
+package com.lions.ecom.Structs;
+
+import com.lions.ecom.Adapters.VerticalScrollableItemAdapter;
 
 /*
  * List item containing a horizontal scrollable ListView

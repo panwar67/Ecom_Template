@@ -1,4 +1,4 @@
-package com.lions.ecom;
+package com.lions.ecom.Adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -6,6 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.lions.ecom.Custom_Widgets.MultiLevelListView;
+import com.lions.ecom.R;
+import com.lions.ecom.Structs.VerticalScrollableItem;
 
 import java.util.List;
 

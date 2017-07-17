@@ -1,4 +1,4 @@
-package com.lions.ecom;
+package com.lions.ecom.Custom_Widgets;
 
 import android.content.Context;
 import android.util.AttributeSet;

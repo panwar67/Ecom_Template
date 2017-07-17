@@ -1,10 +1,12 @@
-package com.lions.ecom;
+package com.lions.ecom.Ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.lions.ecom.R;
 
-public class Myntra_product_item extends AppCompatActivity {
+
+public class Product_Page extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
