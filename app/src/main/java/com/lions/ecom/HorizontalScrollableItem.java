@@ -1,4 +1,4 @@
-package com.dannysu.listlistlist;
+package com.lions.ecom;
 
 /*
  * List item containing a horizontal scrollable ListView
