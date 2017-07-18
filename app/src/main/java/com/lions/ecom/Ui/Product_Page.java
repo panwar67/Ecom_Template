@@ -24,9 +24,9 @@ public class Product_Page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        init();
+     //   init();
     }
-    private void init() {
+    /*private void init() {
         for(int i=0;i<IMAGES.length;i++)
             ImagesArray.add(IMAGES[i]);
 
@@ -42,7 +42,7 @@ public class Product_Page extends AppCompatActivity {
         NUM_PAGES =IMAGES.length;
 
         // Auto start of viewpager
-        final Handler handler = new Handler();
+   //     final Handler handler = new Handler();
         final Runnable Update = new Runnable() {
             public void run() {
                 if (currentPage == NUM_PAGES) {
@@ -79,6 +79,6 @@ public class Product_Page extends AppCompatActivity {
             }
         });
 
-    }
+    }*/
 
 }

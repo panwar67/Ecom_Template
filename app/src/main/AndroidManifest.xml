@@ -9,20 +9,21 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Ui.MainActivity"
-            android:label="@string/title_activity_main">
-
-        </activity>
+            android:label="@string/title_activity_main"></activity>
         <activity
             android:name=".Ui.Nav_Drawer"
             android:label="@string/title_activity_nav__drawer"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Ui.Product_Page">
+
+        </activity>
+        <activity android:name=".Ui.Main2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Ui.Product_Page"></activity>
     </application>
 
 </manifest>
