@@ -1,5 +1,6 @@
 package com.lions.ecom.Ui;
 
+import android.graphics.Color;
 import android.provider.ContactsContract;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.lions.ecom.R;
 
 import java.util.ArrayList;
 
@@ -28,14 +31,16 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
     @Override
     public MainAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.s)
+        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.sample,parent,false);
+        ViewHolder vh=new ViewHolder(v);
+        return vh;
 
-        return null;
     }
 
     @Override
     public void onBindViewHolder(MainAdapter.ViewHolder holder, int position) {
-
+holder.textView.setText(listOfKeys.get(position));
+        holder.imageView.setBackgroundColor(Color.parseColor(listOfValues.get(position)));
     }
 
     @Override
@@ -48,6 +53,9 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
         ImageView imageView;
         public ViewHolder(View itemView) {
             super(itemView);
+            textView=(TextView)itemView.findViewById(R.id.textView6);
+            imageView=(ImageView)itemView.findViewById(R.id.imageView);
+
         }
     }
 }

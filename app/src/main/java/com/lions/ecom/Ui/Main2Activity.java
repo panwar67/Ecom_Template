@@ -5,10 +5,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.ListView;
-
 import com.lions.ecom.Adapters.MyListAdapter;
 import com.lions.ecom.R;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -42,7 +40,7 @@ ListView listView;
        // listView.setAdapter(adapter);
         recyclerView=(RecyclerView)findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
-        layoutManager=new LinearLayoutManager(this);
+        layoutManager=new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
         recyclerView.setLayoutManager(layoutManager);
         adapter=new MainAdapter(listOfKeys,listOfValues);
         recyclerView.setAdapter(adapter);
